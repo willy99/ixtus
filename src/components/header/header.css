@@ -210,3 +210,56 @@ header.active {
 .menu > li:hover .submenu li:nth-child(odd){
   transform: skewX(-25deg) translateX(-15px);
 }
+
+/* Одна зміна для малих екранів: скриваємо зовнішній вигляд родинного меню */
+@media only screen and (max-width: 600px) {
+  .menu > li {
+    display: block;
+    width: 100%;
+    transform: skewX(0);
+  }
+
+  .menu > li > a {
+    transform: skewX(0);
+  }
+
+  .submenu {
+    position: static;
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    padding-left: 20px;
+    transform: skewX(0);
+    transform-origin: left top;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+  }
+
+  .submenu li:nth-child(odd),
+  .submenu li:nth-child(even) {
+    /* transform: skewX(0) translateX(0); */
+  }
+
+  .submenu > li:nth-child(odd)::after,
+  .submenu > li:nth-child(even)::after {
+    right: 0;
+    left: 0;
+    /* transform: skewX(0) rotate(0); */
+  }
+
+  .menu > li:hover .submenu {
+    max-height: 200px; /* Задайте висоту, яку ви хочете відобразити */
+  }
+
+  .menu > li:hover .submenu li {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .menu > li:hover .submenu li:nth-child(even),
+  .menu > li:hover .submenu li:nth-child(odd) {
+    /* transform: skewX(0) translateX(0); */
+  }
+}

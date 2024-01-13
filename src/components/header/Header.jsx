@@ -1,7 +1,7 @@
 import React from "react"
 import logo from "../../assets/images/icons/church.png"
 import "./header.css"
-import {User} from "../User/User"
+import Locale from "../locale/Locale"
 import {nav} from "../../assets/data/constants"
 import {Link} from "react-router-dom"
 import { t } from '../i18n/i18n';
@@ -37,7 +37,7 @@ export const Header = () => {
                         </ul>
                     </nav>
                     <div className='account flexCenter'>
-                        <User/>
+                        <Locale />
                     </div>
                 </div>
             </header>

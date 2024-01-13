@@ -107,6 +107,11 @@ form input {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 15px;
 }
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+}
 .container {
   max-width: 95%;
   margin: auto;
@@ -127,8 +132,13 @@ footer .icon {
 .link {
   color: #000;
 }
-
-
+.whiteText {
+  color: white;
+}
+.icon32 {
+  width: 32px;
+  height: 32px;
+}
 
 .fancyHeader {
   font-size: 2.5em;

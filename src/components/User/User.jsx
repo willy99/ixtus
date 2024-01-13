@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from "react"
+import React, { useState } from "react"
 import { BiLogOut } from "react-icons/bi"
 import { RiImageAddLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
@@ -6,17 +6,17 @@ import { Link } from "react-router-dom"
 export const User = () => {
   const user = true;
   const [profileOpen, setProfileOpen] = useState(false);
-  const [locale, setLocale] = useState('ua');
+  // const [locale, setLocale] = useState('ua');
   const close = () => {
     setProfileOpen(false)
   };
 
-  useEffect(() => {
+  /* useEffect(() => {
     if (!localStorage.getItem("locale")) {
       localStorage.setItem("ua");
     }
     setLocale(localStorage.getItem("locale"));
-  });
+  }); */
 
   return (
     <>

@@ -12,7 +12,7 @@ export const Account = () => {
             <div className='left'>
               <div className='img flexCenter'>
                 <input type='file' accept='image/*' src={image} />
-                <img src={image} alt='image' class='image-preview' />
+                <img src={image} class='image-preview' alt=''/>
               </div>
             </div>
             <div className='right'>

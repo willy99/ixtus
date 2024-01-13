@@ -3,6 +3,9 @@ import logo_youtube from "../images/icons/youtube.png"
 import logo_facebook from "../images/icons/facebook.png"
 import logo_gmail from "../images/icons/gmail.png"
 import logo_telegram from "../images/icons/telegram.png"
+import logo_address from "../images/icons/address-location.png"
+import flag_ukraine from "../images/icons/flag_ukraine.png"
+import flag_usa from "../images/icons/flag_usa.png"
 
  export const home_folder = '/newdemo';
 // export const home_folder = '/';
@@ -10,7 +13,7 @@ import logo_telegram from "../images/icons/telegram.png"
 export const nav = [
   {
     id: 1,
-    text: "menuAbout",
+    text: "menuNews",
     submenu: [
       {
         id: 101,
@@ -70,6 +73,12 @@ export const socialUrls = {
     url: 'mailto:ixtus.od.ua@gmail.com',
     logo: logo_gmail
   }
+};
+
+export const icons = {
+  address: logo_address,
+  flag_ukraine: flag_ukraine,
+  flag_usa: flag_usa
 };
 
 export const category = [

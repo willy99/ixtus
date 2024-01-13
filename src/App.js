@@ -9,13 +9,16 @@ import { Account } from "./pages/account/Account"
 import { Create } from "./components/create/Create"
 import { Contact } from "./pages/contact/Contact"
 import { home_folder } from "./assets/data/constants"
-import { append } from './components/i18n/i18n';
-import { User } from "./components/User/User";
-
-const localeFile = User.locale; // TODO
-append(require('./localization/ua.json'));
+import {append} from "./components/i18n/i18n";
 
 const App = () => {
+
+  let locale = localStorage.getItem('userLanguage');
+  if (!locale) {
+    locale = 'ua';
+  }
+  append(require(`./localization/${locale}.json`));
+
   return (
     <>
       <Router basename={`${home_folder}`}>
@@ -33,5 +36,5 @@ const App = () => {
       </Router>
     </>
   )
-}
+};
 export default App

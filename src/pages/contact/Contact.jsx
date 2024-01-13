@@ -11,9 +11,22 @@ export const Contact = () => {
             <div className='text'>
               <h3>АДРЕСА</h3>
               <h1>ТА КОНТАКТНІ ДАНІ</h1>
-              <form>
-                <div className="blacktext">Contact details...</div>
-              </form>
+
+                <div className='container grid2'>
+                  <div>
+
+                  </div>
+                  <div className='whiteText'>
+                    ​вул.Школьна 27 "А", с. Іллічанка, Ліманский р.,  Одеська обл., індекс 67560
+                  </div>
+
+                  <div>
+
+                  </div>
+                  <div className='whiteText'>
+                   (048) 795-24-58
+                  </div>
+                </div>
 
             </div>
           </div>
