@@ -7,7 +7,8 @@ import { Regsiter } from "./pages/login/Regsiter"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import { Account } from "./pages/account/Account"
 import { Create } from "./components/create/Create"
-import { Contact } from "./pages/contact/Contact"
+import { Contact } from "./pages/common/Contact"
+import { About } from "./pages/common/About"
 import { home_folder } from "./assets/data/constants"
 import {append} from "./components/i18n/i18n";
 
@@ -31,6 +32,7 @@ const App = () => {
           <Route exact path='/account' component={Account} />
           <Route exact path='/create' component={Create} />
           <Route exact path='/contact' component={Contact} />
+          <Route exact path='/about' component={About} />
         </Switch>
         <Footer />
       </Router>

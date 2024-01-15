@@ -3,9 +3,12 @@ import logo_youtube from "../images/icons/youtube.png"
 import logo_facebook from "../images/icons/facebook.png"
 import logo_gmail from "../images/icons/gmail.png"
 import logo_telegram from "../images/icons/telegram.png"
-import logo_address from "../images/icons/address-location.png"
+import icon_address from "../images/icons/icon_address.png"
+import icon_phone from "../images/icons/icon_phone.png"
+import icon_email from "../images/icons/icon_email.png"
 import flag_ukraine from "../images/icons/flag_ukraine.png"
 import flag_usa from "../images/icons/flag_usa.png"
+import menu_list from "../images/icons/menu_list.png"
 
  export const home_folder = '/newdemo';
 // export const home_folder = '/';
@@ -52,6 +55,7 @@ export const nav = [
 
 export const youtubeChannelId = 'UCC0YxrLRJpYUorAt3jg8eDA';
 export const youtubeBaseFeedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.youtube.com%2Ffeeds%2Fvideos.xml%3Fchannel_id%3D';
+export const googleMapAddress = 'https://www.google.com/maps/place/%D0%A5%D1%80%D0%B0%D0%BC+%D0%A1%D0%BF%D0%B0%D1%81%D0%B5%D0%BD%D0%B8%D1%8F,+%D0%A6%D0%B5%D1%80%D0%BA%D0%BE%D0%B2%D1%8C+%D0%95%D0%B2%D0%B0%D0%BD%D0%B3%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D1%85+%D1%85%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%B0%D0%BD-%D0%B1%D0%B0%D0%BF%D1%82%D0%B8%D1%81%D1%82%D0%BE%D0%B2/@46.597813,30.798569,16z/data=!4m6!3m5!1s0x40c624bed1de1497:0x696215327c6a0210!8m2!3d46.5978126!4d30.7985687!16s%2Fg%2F11xwsf7zk?hl=en&entry=ttu';
 export const socialUrls = {
   youtube: {
     url: 'https://www.youtube.com/channel/UCC0YxrLRJpYUorAt3jg8eDA',
@@ -69,16 +73,24 @@ export const socialUrls = {
     url: 'https://t.me/templeofsave_odessa',
     logo: logo_telegram
   },
-  gmail: {
+  email: {
     url: 'mailto:ixtus.od.ua@gmail.com',
     logo: logo_gmail
+  },
+  email_clean: {
+    url: 'ixtus.od.ua@gmail.com',
+    logo: logo_gmail
   }
+
 };
 
 export const icons = {
-  address: logo_address,
+  address: icon_address,
+  phone: icon_phone,
+  email: icon_email,
   flag_ukraine: flag_ukraine,
-  flag_usa: flag_usa
+  flag_usa: flag_usa,
+  menu_list: menu_list,
 };
 
 export const category = [
@@ -157,5 +169,6 @@ export const category = [
 ];
 
 export const youtubeVideoKeywordWorship = 'Богослужіння';
+export const youtubeVideoKeywordNightWorship = 'Вечірнє Богослужіння';
 export const youtubeVideoKeywordBible = 'Вивчення Слова';
 export const youtubeVideoKeywordOnline = 'Пряма трансляція';

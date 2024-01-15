@@ -4,14 +4,13 @@ import { AiOutlineClockCircle } from "react-icons/ai"
 import { youtubeBaseFeedUrl,
     youtubeChannelId,
     youtubeVideoKeywordWorship,
+    youtubeVideoKeywordNightWorship,
     youtubeVideoKeywordBible,
     youtubeVideoKeywordOnline
 } from '../../assets/data/constants';
 import { t } from '../i18n/i18n';
 
 export default function YoutubeNews({ newstype }) {
-
-    console.log('>>> ' + newstype);
 
     const [videos, setVideos] = useState([]);
     const [videosLabel, setVideosLabel] = useState([]);
@@ -24,7 +23,7 @@ export default function YoutubeNews({ newstype }) {
                     const data = await fetch(`${youtubeBaseFeedUrl}${youtubeChannelId}`).then(response => response.json());
                     switch (newstype) {
                         case 'general':
-                            setVideos(data.items.filter(item => item.title.startsWith(youtubeVideoKeywordWorship)).slice(0, 3));
+                            setVideos(data.items.filter(item => item.title.startsWith(youtubeVideoKeywordNightWorship) || item.title.startsWith(youtubeVideoKeywordWorship)).slice(0, 3));
                             setVideosLabel(t('youtubeVideosWorship'));
                             break;
                         case 'online':
@@ -36,7 +35,7 @@ export default function YoutubeNews({ newstype }) {
                             setVideosLabel(t("youtubeVideosBible"));
                             break;
                         default:
-                            setVideos(data.items.filter(item => item.title.startsWith(youtubeVideoKeywordWorship)).slice(0, 3));
+                            setVideos(data.items.filter(item => item.title.startsWith(youtubeVideoKeywordNightWorship) || item.title.startsWith(youtubeVideoKeywordWorship)).slice(0, 3));
                             setVideosLabel(t("youtubeVideosWorship"));
                             break;
                     }

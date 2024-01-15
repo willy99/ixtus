@@ -5,6 +5,25 @@ header {
   position: relative;
   z-index: 44;
 }
+
+.header_grid {
+  display:grid;
+  grid-template-columns: 10% 80% 10%;
+  vertical-align: top;
+}
+
+/* columns */
+.header_grid > * {
+  padding:0.5rem;
+}
+
+
+.logo {
+  width: fit-content;
+  height: fit-content;
+  vertical-align: top;
+}
+
 /* User */
 .profile {
   margin-left: 30px;
@@ -69,7 +88,6 @@ header.active {
     display: none;
   }
 }
-
 
 
 
@@ -211,8 +229,31 @@ header.active {
   transform: skewX(-25deg) translateX(-15px);
 }
 
+.menu-toggle {
+    display: none; /* Змушуємо кнопку бути невидимою за замовчуванням */
+}
+
 /* Одна зміна для малих екранів: скриваємо зовнішній вигляд родинного меню */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
+  .menu {
+    display: none; /* Сховати меню за замовчуванням */
+  }
+  .menu.active {
+    display: block; /* Відображаємо меню при наявності класу "active" */
+  }
+
+  .menu-toggle {
+        display: block; /* Показуємо кнопку на малих екранах */
+        background: #34495e;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        cursor: pointer;
+  }
+  .menu-toggle.active + .menu {
+        display: block; /* Показуємо меню при кліку на активну кнопку */
+  }
+
   .menu > li {
     display: block;
     width: 100%;
@@ -262,4 +303,7 @@ header.active {
   .menu > li:hover .submenu li:nth-child(odd) {
     /* transform: skewX(0) translateX(0); */
   }
+
+
 }
+

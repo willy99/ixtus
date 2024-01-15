@@ -1,12 +1,18 @@
 .backImg {
   width: 100%;
-  height: 50vh;
+  min-height: 50vh;
   position: relative;
 }
 .backImg img {
   width: 100%;
   height: 50vh;
   object-fit: cover;
+}
+/* Add custom styling for specific images (e.g., icons) */
+.backImg img.icon32 {
+  width: 32px; /* your custom width */
+  height: 32px; /* your custom height */
+  object-fit: contain; /* adjust as needed */
 }
 .text {
   position: absolute;
@@ -16,15 +22,182 @@
   text-align: center;
   color: #fff;
 }
-.text h3 {
+.text_container_dark {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  width: 50%;
+  z-index: 1;
+  color: #fff;
+  min-height: 500px;
+}
+@media screen and (max-width: 768px) {
+  .text_container_dark {
+    width: 80%;
+    left: 10%;
+  }
+}
+
+
+
+.text_container_light {
+  margin: 50px 0;
+}
+.text_container_light .container {
+  padding: 50px;
+  max-width: 60%;
+  margin: auto;
+}
+.text_container_light .content {
+  margin-top: 80px;
+  display: flex;
+  justify-content: flex-start;
+}
+.text_container_light .left {
+  width: 150px;
+  position: relative;
+}
+.text_container_light .right {
+  width: calc(100% - 180px);
+  margin-left: 50px;
+}
+
+.text_container_light .left .img input {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+}
+.text_container_light .img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.text_container_light .right label {
+  font-size: 17px;
+  color: #000;
+  margin-bottom: 10px;
+  display: block;
+}
+
+@media screen and (max-width: 2048px) {
+  .text_container_light {
+    margin: 20px 0;
+  }
+  .text_container_light .container {
+    padding: 1px;
+    max-width: 90%;
+    margin: auto;
+  }
+  .text_container_light .content {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+}
+
+/* container */
+.article_grid {
+  display:block;
+  text-align: justify;
+}
+
+/* columns */
+.article_grid > * {
+  padding:2rem;
+}
+
+.article_grid p::first-letter {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+/* tablet breakpoint */
+@media (min-width:768px) {
+    .article_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.text_container_dark h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.text_container_dark h2 {
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.text_container_dark h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.text_container_light h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.text_container_light h2 {
+  font-weight: 600;
+  font-size: 25px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.text_container_light h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.common .text h3 {
   font-weight: 600;
   margin-bottom: 10px;
 }
-.text h1 {
+.common .text h1 {
   font-size: 40px;
 }
+
+
+.contact_grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 10% 90%;
+  grid-gap: 20px;
+}
+
+.common a {
+  box-shadow: inset 0 0 0 0 #54b3d6;
+  color: #54b3d6;
+  margin: 0 -.25rem;
+  padding: 0 .25rem;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+.common a:hover {
+  box-shadow: inset 600px 0 0 0 #54b3d6;
+  color: white;
+}
+
+.contact_grid_areaA {
+  text-align: right;
+}
+
+.contact_grid.areaB {
+  text-align: left;
+}
+
 .container {
   max-width: 95%;
+  min-height: fit-content;
   margin: auto;
 }
 .grid {
@@ -56,3 +229,55 @@
   background: #eee;
 }
 
+
+
+
+
+
+.fancyHeader {
+  font-size: 2.5em;
+  text-align: center;
+  text-shadow: 2px 2px 2px;
+}
+
+.subtitle {
+  margin: 0 0 2em 0;
+}
+.fancy {
+  line-height: 1.5;
+  text-align: center;
+}
+.fancy span {
+  display: inline-block;
+  position: relative;
+}
+.fancy span:before,
+.fancy span:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid gray;
+  border-top: 1px solid gray;
+  top: 0;
+  width: 30%;
+  margin-top: 10px;
+}
+.fancy span:before {
+  right: 100%;
+  margin-right: 15px;
+}
+.fancy span:after {
+  left: 100%;
+  margin-left: 15px;
+}
+.top30 {
+  padding-top: 30px;
+}
+@media screen and (max-width: 768px) {
+  .fancy span:after {
+    display: none;
+  }
+  .fancy span:before {
+    display: none;
+  }
+}
